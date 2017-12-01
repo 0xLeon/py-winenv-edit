@@ -19,6 +19,7 @@ def set_env_var(name, value, overwrite=True, env=winenv.ENV_USER):
 
     if len(value) == 0:
         # TODO: implement deletion in winenv
+        pass
     else:
         winenv.set_env_var(name, value, overwrite=overwrite, env=env)
 
