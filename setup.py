@@ -15,6 +15,6 @@ setup(
 
     install_requires=[
         'winenv',
-        'elevate'
-    ]
+        'elevate',
+    ],
 )
