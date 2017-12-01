@@ -7,13 +7,13 @@ import elevate
 
 __version__ = '0.0.0'
 
-def prepend_env_var(name, value, env=winenv.ENV_USER):
+def prepend_env_var(name, value, env=winenv.ENV_USER, *other):
     winenv.append_env_var(name, value, True, ';', env)
 
-def append_env_var(name, value, env=winenv.ENV_USER):
+def append_env_var(name, value, env=winenv.ENV_USER, *other):
     winenv.append_env_var(name, value, False, ';', env)
 
-def set_env_var(name, value, overwrite=True, env=winenv.ENV_USER):
+def set_env_var(name, value, env=winenv.ENV_USER, overwrite=True, *other):
     if value.upper() == 'PATH' and overwrite:
         raise EnvironmentError('Overwriting the PATH environment variable is not supported. Use the append or prepend action instead.')
 
