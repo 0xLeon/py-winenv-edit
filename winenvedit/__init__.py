@@ -47,4 +47,5 @@ def main():
                 continue
 
             name, value = var.split('=', 1)
-            actions[args.action]()
+            actions[args.action](name, value, envs[int(args.system)], args.overwrite)
+
