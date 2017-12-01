@@ -49,3 +49,5 @@ def main():
             name, value = var.split('=', 1)
             actions[args.action](name, value, envs[int(args.system)], args.overwrite)
 
+if __name__ == '__main__':
+    main()
