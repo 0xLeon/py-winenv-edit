@@ -25,7 +25,7 @@ def set_env_var(name, value, env=winenv.ENV_USER, overwrite=True, *other):
 	else:
 		winenv.set_env_var(name, value, overwrite=overwrite, env=env)
 
-def main():
+def main(argv=None):
 	actions = {
 		'set': set_env_var,
 		'prepend': prepend_env_var,
@@ -40,7 +40,7 @@ def main():
 	p.add_argument('-f', '--force', action='store_true', dest='overwrite')
 	p.add_argument('vars', nargs='+', metavar='name=[value]')
 
-	args = p.parse_args()
+	args = p.parse_args(argv)
 
 	if not args.system or elevate.elevate():
 		for var in args.vars:
