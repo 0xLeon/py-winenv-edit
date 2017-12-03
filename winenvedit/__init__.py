@@ -29,7 +29,7 @@ def main(argv=None):
 	actions = {
 		'set': set_env_var,
 		'prepend': prepend_env_var,
-		'append': append_env_var
+		'append': append_env_var,
 	}
 
 	envs = [winenv.ENV_USER, winenv.ENV_SYSTEM]
