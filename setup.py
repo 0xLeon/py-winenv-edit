@@ -13,6 +13,12 @@ setup(
 
 	packages=find_packages(),
 
+	entry_points={
+		'console_scripts': [
+			'winenvedit = winenvedit:main'
+		],
+	},
+
 	install_requires=[
 		'winenv',
 		'elevate',
